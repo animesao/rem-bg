@@ -16,9 +16,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/OWNER/REPOSITORY"
-Repository = "https://github.com/OWNER/REPOSITORY"
-Issues = "https://github.com/OWNER/REPOSITORY/issues"
+Homepage = "https://github.com/animesao/rem-bg"
+Repository = "https://github.com/animesao/rem-bg"
+Issues = "https://github.com/animesao/rem-bg/issues"
 
 [tool.ruff]
 line-length = 100

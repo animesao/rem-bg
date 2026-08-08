@@ -1,7 +1,7 @@
 # Background Remover
 
-[![CI](https://github.com/OWNER/REPOSITORY/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/REPOSITORY/actions/workflows/ci.yml)
-[![Latest release](https://img.shields.io/github/v/release/OWNER/REPOSITORY)](https://github.com/OWNER/REPOSITORY/releases)
+[![CI](https://github.com/animesao/rem-bg/actions/workflows/ci.yml/badge.svg)](https://github.com/animesao/rem-bg/actions/workflows/ci.yml)
+[![Latest release](https://img.shields.io/github/v/release/animesao/rem-bg)](https://github.com/animesao/rem-bg/releases)
 
 A local, offline desktop application for removing image backgrounds. Select one image or an entire folder, process it on your own computer, and export transparent PNG files.
 
@@ -17,14 +17,13 @@ A local, offline desktop application for removing image backgrounds. Select one 
 
 ## Download
 
-Download the latest release from the [GitHub Releases page](https://github.com/OWNER/REPOSITORY/releases):
+Download the latest release from the [GitHub Releases page](https://github.com/animesao/rem-bg/releases):
 
 - `background-remover-windows-x64.exe` for 64-bit Windows.
 - `background-remover-ubuntu-amd64.deb` for 64-bit Ubuntu/Debian.
 
 The release binaries include the application, Python runtime, dependencies, and the `u2net` model. End users do not need Python or an internet connection after downloading the release.
 
-> Replace `OWNER/REPOSITORY` in the badges and links above with your actual GitHub owner and repository name.
 
 ## Windows
 
