@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Local environments
+.venv/
+venv/
+.env
+
+# Local model and user output
+models/*
+!models/.gitkeep
+output/
+
+# Build output
+build/
+dist/
+*.spec
+
+# IDE/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
