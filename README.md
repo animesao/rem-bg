@@ -14,6 +14,9 @@ A local, offline desktop application for removing image backgrounds. Select one 
 - Bundled `u2net` model in release builds.
 - Automated GitHub builds for Windows and Ubuntu.
 - Release assets: Windows `.exe` and Ubuntu/Debian `.deb`.
+- English UI by default with a Russian language switch.
+- Built-in version display and GitHub release update checker.
+- Polished light desktop interface with progress feedback.
 
 ## Download
 
@@ -92,10 +95,10 @@ On Ubuntu/Debian:
 
 ```bash
 python scripts/build_app.py
-python scripts/package_deb.py 0.1.0
+python scripts/package_deb.py 0.1.1
 ```
 
-The package is created at `dist/background-remover_0.1.0_amd64.deb`.
+The package is created at `dist/background-remover_0.1.1_amd64.deb`.
 
 > Build on the target operating system. Windows executables and Debian packages are produced by separate GitHub Actions runners.
 
@@ -109,8 +112,8 @@ The repository includes two workflows:
 To publish a release, push a semantic version tag:
 
 ```bash
-git tag v0.1.0
-git push origin v0.1.0
+git tag v0.1.1
+git push origin v0.1.1
 ```
 
 GitHub Actions will build:
