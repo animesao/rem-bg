@@ -17,6 +17,7 @@ from tkinter import END, Listbox, StringVar, Tk, filedialog, messagebox
 from tkinter import ttk
 
 from app_info import APP_NAME, APP_VERSION, GITHUB_LATEST_RELEASE_API, GITHUB_RELEASES_URL
+from image_processing import crop_transparent, remove_halo
 
 
 def application_dir() -> Path:
@@ -394,7 +395,10 @@ class BackgroundRemoverApp:
                 try:
                     result_bytes = remove(input_path.read_bytes(), session=self.session)
                     with Image.open(BytesIO(result_bytes)) as result:
-                        result.convert("RGBA").save(destination, format="PNG", optimize=True)
+                        clean_result = remove_halo(result, soft_threshold=40)
+                        crop_transparent(clean_result, padding=20).save(
+                            destination, format="PNG", optimize=True
+                        )
                     self.root.after(0, self._update_progress, index, self._t("done_item", name=input_path.name))
                 except Exception as error:
                     failed.append(f"{input_path.name}: {error}")

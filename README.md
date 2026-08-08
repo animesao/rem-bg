@@ -95,10 +95,10 @@ On Ubuntu/Debian:
 
 ```bash
 python scripts/build_app.py
-python scripts/package_deb.py 0.1.1
+python scripts/package_deb.py 0.1.2
 ```
 
-The package is created at `dist/background-remover_0.1.1_amd64.deb`.
+The package is created at `dist/background-remover_0.1.2_amd64.deb`.
 
 > Build on the target operating system. Windows executables and Debian packages are produced by separate GitHub Actions runners.
 
@@ -112,8 +112,8 @@ The repository includes two workflows:
 To publish a release, push a semantic version tag:
 
 ```bash
-git tag v0.1.1
-git push origin v0.1.1
+git tag v0.1.2
+git push origin v0.1.2
 ```
 
 GitHub Actions will build:

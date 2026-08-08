@@ -127,10 +127,14 @@ def process_image(input_path: Path, destination: Path, session: object) -> None:
     # работает даже в чистом Python без предварительной установки rembg вручную.
     from PIL import Image
     from rembg import remove
+    from image_processing import crop_transparent, remove_halo
 
     result_bytes = remove(input_path.read_bytes(), session=session)
     with Image.open(BytesIO(result_bytes)) as result:
-        result.convert("RGBA").save(destination, format="PNG", optimize=True)
+        clean_result = remove_halo(result, soft_threshold=40)
+        crop_transparent(clean_result, padding=20).save(
+            destination, format="PNG", optimize=True
+        )
 
 
 def main() -> int:
